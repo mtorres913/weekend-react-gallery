@@ -1,26 +1,26 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import GalleryItem from '../GalleryItem/GalleryItem';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 
-function GalleryList (listOfItems){
-
- 
+function GalleryList ({listOfItems}){
 
     return (
         <div>
-            {
-            listOfItems.map((item) => (
+            {/* {JSON.stringify(listOfItems)} */}
+            <Box sx={ {width:300, height:300}}>
+            <Grid container spacing={2}>
+            {listOfItems.map((item) => (
+            <Grid item xs={12} sm={6} md={4} lg={2} key={item.id}>
             <GalleryItem 
             key={item.id}
             item={item}
-            fetchGalleryItems={fetchGalleryItems}
-            listOfItems={listOfItems} 
             />
-           ))
-            }
-        </div>
-        
-    )
+            </Grid>
+           ))}
+            </Grid>
+            </Box>  
+        </div>     
+    );
 }
         
 export default GalleryList;
