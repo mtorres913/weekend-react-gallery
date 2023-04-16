@@ -22,6 +22,7 @@ function GalleryItem({item}) {
         <div>
     {/* <img src={item.path}  />     */}
        <div onClick={() => setToggle(!toggle)}>{renderImage()}</div> 
+       <h3>Likes:{item.likes}</h3>
     <button>Like</button>
   </div>
     )
