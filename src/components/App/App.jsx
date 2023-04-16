@@ -28,6 +28,7 @@ useEffect(() => {
         </header>
           <GalleryList 
           listOfItems={listOfItems}
+          fetchGalleryItems={fetchGalleryItems}
           /> 
       </div>
     );

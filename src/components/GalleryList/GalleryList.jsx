@@ -2,7 +2,7 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
-function GalleryList ({listOfItems}){
+function GalleryList ({listOfItems, fetchGalleryItems}){
 
     return (
         <div>
@@ -14,6 +14,7 @@ function GalleryList ({listOfItems}){
             <GalleryItem 
             key={item.id}
             item={item}
+            fetchGalleryItems={fetchGalleryItems}
             />
             </Grid>
            ))}
