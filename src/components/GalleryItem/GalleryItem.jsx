@@ -2,8 +2,28 @@ import { useState, useEffect } from 'react'
 import axios from 'axios';
 
 function GalleryItem({item}) {
+    const [toggle, setToggle] = useState(false);
+
+    const renderImage= () => {
+        if (toggle === true) {
+            return ( 
+             <div onClick={() => setToggle(!toggle)}>{item.description} </div>
+               
+            )
+        } else {
+            return (
+                <img src={item.path} /> 
+            )
+        }
+    }
+
     return (
-  <img src={item.path} />          
+       
+        <div>
+    {/* <img src={item.path}  />     */}
+       <div onClick={() => setToggle(!toggle)}>{renderImage()}</div> 
+    <button>Like</button>
+  </div>
     )
 }
 

@@ -8,7 +8,7 @@ function GalleryList ({listOfItems}){
         <div>
             {/* {JSON.stringify(listOfItems)} */}
             <Box sx={ {width:300, height:300}}>
-            <Grid container spacing={2}>
+            <Grid container spacing={19}>
             {listOfItems.map((item) => (
             <Grid item xs={12} sm={6} md={4} lg={2} key={item.id}>
             <GalleryItem 
